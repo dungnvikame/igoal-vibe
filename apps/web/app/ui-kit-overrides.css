@@ -1,0 +1,76 @@
+/* Maps the existing feature markup to ikame Core DS tokens during migration. */
+:root {
+  color-scheme: light dark;
+  --ds-bg_primary: var(--ds-bg-primary); --ds-bg_secondary: var(--ds-bg-secondary); --ds-bg_tertiary: var(--ds-bg-tertiary);
+  --ds-bg_sidebar_secondary: var(--ds-bg-sidebar-secondary); --ds-bg_button_primary: var(--ds-bg-button-primary); --ds-bg_button_tertiary: var(--ds-bg-button-tertiary);
+  --ds-bg_input_fill: var(--ds-bg-input-fill); --ds-bg_interactive_secondary: var(--ds-bg-interactive-secondary); --ds-bg_accent_primary: var(--ds-bg-accent-primary);
+  --ds-bg_success: var(--ds-bg-success); --ds-bg_warning: var(--ds-bg-warning); --ds-bg_error: var(--ds-bg-error); --ds-bg_info: var(--ds-bg-info);
+  --ds-bg_inverse: var(--ds-bg-inverse); --ds-bg_overlay: var(--ds-bg-overlay); --ds-bg_green_subtle: var(--ds-bg-green-subtle); --ds-bg_green_medium: var(--ds-bg-green-medium);
+  --ds-bg_blue_subtle: var(--ds-bg-blue-subtle); --ds-bg_orange_medium: var(--ds-bg-orange-medium); --ds-bg_red_subtle: var(--ds-bg-red-subtle);
+  --ds-fg_on_accent: var(--ds-fg-on-accent); --ds-fg_on_contrast: var(--ds-fg-on-contrast); --ds-fg_link: var(--ds-fg-link);
+  --ds-fg_success: var(--ds-fg-success); --ds-fg_warning: var(--ds-fg-warning); --ds-fg_error: var(--ds-fg-error); --ds-fg_info: var(--ds-fg-info);
+  --ds-fg_teal_strong: var(--ds-fg-teal-strong); --ds-fg_green_strong: var(--ds-fg-green-strong); --ds-fg_blue_strong: var(--ds-fg-blue-strong);
+  --ds-fg_violet_strong: var(--ds-fg-violet-strong); --ds-border_primary: var(--ds-border-primary); --ds-border_button: var(--ds-border-button);
+  --ds-text_primary: var(--ds-text-primary); --ds-text_secondary: var(--ds-text-secondary); --ds-text_tertiary: var(--ds-text-tertiary);
+  --ds-icon_primary: var(--ds-icon-primary); --ds-shadow_l: var(--ds-shadow-l); --ds-shadow_m: var(--ds-shadow-m);
+}
+
+body { background: var(--ds-bg-secondary); color: var(--ds-text-primary); font-family: Inter, var(--font-geist-sans), sans-serif; }
+.app-shell { font-size: 14px; line-height: 1.5; }
+.eyebrow { font-size: 12px; letter-spacing: .08em; }
+.hero-row h1 { font-size: 32px; line-height: 1.25; }
+.hero-row p:last-child { font-size: 15px; }
+.week-button, .role-select-label select, .search input { font-size: 14px; }
+.metric-card > strong, .action-stats strong { font-size: 32px; }
+.metric-card > p, .panel-head h2, .ai-heading h2 { font-size: 16px; }
+.panel-head p, .ai-heading p, .metric-note, .summary-lead, .summary-panel li p { font-size: 13px; }
+.filter-row button, .text-button, .full-button, .secondary-button, .primary-button { font-size: 13px; }
+.review-copy > strong, .review-copy b, .action-copy strong, .risk-copy strong { font-size: 14px; }
+.review-copy small, .review-copy .reason, .due, .action-copy p, .action-copy small, .health-stats div { font-size: 12px; }
+.priority-pill, .beta, .trend, .nav-count, .table-note { font-size: 11px; }
+.health-score > div:last-child strong, .health-score p, .healthy { font-size: 13px; }
+.summary-panel li > span, .metric-icon { font-size: 13px; }
+.sidebar { background: var(--ds-bg-sidebar-secondary); color: var(--ds-text-primary); }
+.brand, .profile-card strong { color: var(--ds-text-primary); }
+.brand-mark, .nav-count { background: var(--ds-bg_button_primary); color: var(--ds-fg_on_accent); }
+.nav-label, .profile-card span, .nav-icon, .debug-link { color: var(--ds-text-tertiary); }
+.nav-item { color: var(--ds-text-secondary); }
+.nav-item:hover, .nav-item.active { background: var(--ds-bg_interactive_secondary); color: var(--ds-text-primary); }
+.nav-item.active .nav-icon { color: var(--ds-icon_primary); }
+.workspace, .content { background: var(--ds-bg-secondary); }
+.topbar, .mobile-tabs { background: var(--ds-bg_secondary); border-color: var(--ds-border_primary); }
+.search, .week-button, .icon-button, .role-select-label select { background: var(--ds-bg_input_fill); border-color: transparent; color: var(--ds-text_primary); }
+.search kbd { background: var(--ds-bg_tertiary); border-color: transparent; color: var(--ds-text_secondary); box-shadow: none; }
+.hero-row h1, .panel-head h2, .ai-heading h2 { color: var(--ds-text_primary); font-family: Inter, var(--font-geist-sans), sans-serif; font-weight: 600; }
+.hero-row p:last-child, .eyebrow, .panel-head p, .ai-heading p { color: var(--ds-text_secondary); }
+.metric-card, .panel, .action-stats article, .state-card { background: var(--ds-bg_primary); border-color: var(--ds-border_primary); box-shadow: none; }
+.metric-icon { background: var(--ds-bg_success); color: var(--ds-fg_success); }
+.amber-icon { background: var(--ds-bg_warning); color: var(--ds-fg_warning); }
+.blue-icon { background: var(--ds-bg_info); color: var(--ds-fg_info); }
+.lilac-icon { background: var(--ds-bg_violet_subtle); color: var(--ds-fg_violet_strong); }
+.trend.up { background: var(--ds-bg_success); color: var(--ds-fg_success); }
+.trend.down { background: var(--ds-bg_warning); color: var(--ds-fg_warning); }
+.trend.neutral { background: var(--ds-bg_tertiary); color: var(--ds-text_secondary); }
+.progress, .spark-bars i { background: var(--ds-bg_tertiary); }
+.progress i { background: var(--ds-bg_accent_primary); }
+.text-button { color: var(--ds-fg_link); }
+.filter-row button, .full-button, .secondary-button { background: var(--ds-bg_button_tertiary); border-color: transparent; color: var(--ds-text_primary); }
+.filter-row button.selected { background: var(--ds-bg_interactive_secondary); border-color: transparent; color: var(--ds-text_primary); }
+.review-item:hover, .risk-row:hover, .action-row:hover { background: var(--ds-bg_interactive_secondary); }
+.priority-pill.p0, .severity-pill.high { background: var(--ds-bg_error); color: var(--ds-fg_error); }
+.priority-pill.p1, .severity-pill.medium { background: var(--ds-bg_warning); color: var(--ds-fg_warning); }
+.priority-pill.p2, .severity-pill.low { background: var(--ds-bg_tertiary); color: var(--ds-text_secondary); }
+.avatar { background: var(--ds-bg_tertiary); color: var(--ds-text_primary); }
+.avatar.blue { background: var(--ds-bg_info); color: var(--ds-fg_info); }
+.avatar.amber { background: var(--ds-bg_warning); color: var(--ds-fg_warning); }
+.avatar.rose { background: var(--ds-bg_error); color: var(--ds-fg_error); }
+.avatar-dark { background: var(--ds-bg_inverse); color: var(--ds-fg_on_contrast); }
+.primary-button, .acknowledge-button { background: var(--ds-bg_button_primary); border-color: var(--ds-border_button); color: var(--ds-fg_on_accent); }
+.primary-button:disabled { opacity: .55; }
+.detail-drawer, .event-drawer { background: var(--ds-bg_overlay); color: var(--ds-text_primary); box-shadow: var(--ds-shadow_l); }
+.drawer-close { background: var(--ds-bg_button_tertiary); color: var(--ds-icon_primary); }
+.comment-label textarea, .field-label input, .checkpoint-editor-label textarea, .report-textarea-label textarea { background: var(--ds-bg_input_fill); border-color: transparent; color: var(--ds-text_primary); }
+.form-error, .error-state { background: var(--ds-bg_error); color: var(--ds-fg_error); }
+.forbidden-state { background: var(--ds-bg_warning); border-color: var(--ds-border_primary); }
+.toast { background: var(--ds-bg_inverse); color: var(--ds-fg_on_contrast); box-shadow: var(--ds-shadow_m); }
+@media (max-width: 760px) { .mobile-tabs button.active { background: var(--ds-bg_interactive_secondary); color: var(--ds-text_primary); } }

@@ -1,5 +1,4 @@
 import { readFile, rm, writeFile } from "node:fs/promises";
-import { pathToFileURL } from "node:url";
 
 const serverEntry = new URL("../dist/server/index.js", import.meta.url);
 const clientIndex = new URL("../dist/client/index.html", import.meta.url);
@@ -15,7 +14,7 @@ const obsoleteServerArtifacts = [
   new URL("../dist/server/vinext-server.json", import.meta.url),
 ];
 
-const moduleUrl = pathToFileURL(serverEntry.pathname);
+const moduleUrl = new URL(serverEntry.href);
 moduleUrl.searchParams.set("static-build", Date.now().toString());
 const { default: appWorker } = await import(moduleUrl.href);
 
