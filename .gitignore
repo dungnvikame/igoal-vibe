@@ -1,0 +1,17 @@
+# Local dependencies and build output
+node_modules/
+dist/
+.next/
+.vinext/
+.wrangler/
+coverage/
+*.tsbuildinfo
+
+# Local secrets and machine files
+.env*
+.DS_Store
+*.pem
+*.key
+
+# Temporary packaging artifacts
+*.tar
