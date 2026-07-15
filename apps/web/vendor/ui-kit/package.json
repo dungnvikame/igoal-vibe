@@ -1,0 +1,24 @@
+{
+  "name": "@frontend-team/ui-kit",
+  "version": "2.5.0",
+  "type": "module",
+  "main": "./dist/ui-kit.js",
+  "module": "./dist/ui-kit.js",
+  "types": "./dist/ui-kit.d.ts",
+  "exports": {
+    ".": { "types": "./dist/ui-kit.d.ts", "import": "./dist/ui-kit.js" },
+    "./style.css": "./dist/ui-kit.css"
+  },
+  "sideEffects": ["./dist/ui-kit.css"],
+  "peerDependencies": { "react": ">=18 <20", "react-dom": ">=18 <20" },
+  "dependencies": {
+    "@tanstack/react-table": "8.21.3",
+    "@tanstack/react-virtual": "3.13.18",
+    "class-variance-authority": "0.7.1",
+    "clsx": "2.1.1",
+    "lucide-react": "0.563.0",
+    "radix-ui": "1.6.2",
+    "sonner": "2.0.7",
+    "tailwind-merge": "3.4.0"
+  }
+}
