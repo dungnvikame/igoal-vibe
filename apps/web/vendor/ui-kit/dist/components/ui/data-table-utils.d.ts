@@ -1,0 +1,15 @@
+import { Column, ColumnDef, ColumnPinningState, ExpandedState, RowSelectionState, SortingState } from '@tanstack/react-table';
+import { DataTableColumnDef, DataTableProps, DataTableSortValue } from './data-table-types';
+import * as React from "react";
+export declare function toSortValue(sorting: SortingState): DataTableSortValue | null;
+export declare function toCssSize(value: number | string | undefined): number | string | undefined;
+export declare function toRowSelectionState(keys: string[] | undefined): RowSelectionState;
+export declare function toExpandedState(keys: string[] | undefined): ExpandedState;
+export declare function toExpandedKeys(expanded: ExpandedState, allRowIds: string[]): string[];
+export declare function resolveRowId<T extends object>(row: T, index: number, parentId: string | undefined, getRowKey: DataTableProps<T>["getRowKey"]): string;
+export declare function buildRowLookup<T extends object>(rows: T[], getRowKey: DataTableProps<T>["getRowKey"], getSubRows: DataTableProps<T>["getSubRows"]): Map<string, T>;
+export declare function renderHeaderContent<T>(header: DataTableColumnDef<T>["header"], column: Column<T, unknown>): React.ReactNode;
+export declare function getPinnedState(pinned: false | "left" | "right"): false | "left" | "right";
+export declare function collectColumnPinning<T>(columnDefs: DataTableColumnDef<T>[]): ColumnPinningState;
+export declare function hasResizableColumn<T>(defs: DataTableColumnDef<T>[]): boolean;
+export declare function toTanStackColumns<T extends object>(columnDefs: DataTableColumnDef<T>[]): ColumnDef<T>[];

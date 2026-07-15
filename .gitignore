@@ -11,6 +11,8 @@ coverage/
 .env*
 .npmrc
 !apps/web/.npmrc
+!apps/web/vendor/ui-kit/dist/
+!apps/web/vendor/ui-kit/dist/**
 .DS_Store
 *.pem
 *.key
